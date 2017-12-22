@@ -31,7 +31,7 @@ module Associatable
           #{source_table}.#{through_primary_key} = #{self.id}
       SQL
 
-      source_options.model_class.new(result.first)
+      source_options.model_class.parse_all(result).first
     end
   end
 end
