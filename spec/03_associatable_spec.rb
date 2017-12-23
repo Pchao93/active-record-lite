@@ -159,7 +159,7 @@ describe 'Associatable' do
 
     it 'returns an empty array if no associated items' do
       catless_human = Human.find(4)
-      expect(catless_human.cats).to eq([])
+      expect(catless_human.cats.execute).to eq([])
     end
   end
 end
